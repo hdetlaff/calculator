@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-input placeholder="Your equation goes here" [(ngModel)] = "userInput" ></ion-input>
+    <button ion-button color="secondary" medium item-end (click)="calculate()"><h1>=</h1></button>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Result: <span class="result">{{result}}</span></ion-label>
+  </ion-item>
+
+  <ion-item>
+    <div class= "calc-container" *ngFor="let item of items | async">
+      <p>{{item.message}}</p>
+    </div>  
+  </ion-item>
+</ion-content>
