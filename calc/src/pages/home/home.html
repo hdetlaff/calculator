@@ -17,9 +17,9 @@
     <ion-label>Result: <span class="result">{{result}}</span></ion-label>
   </ion-item>
 
-  <ion-item>
-    <div class= "calc-container" *ngFor="let item of items | async">
-      <p>{{item.message}}</p>
-    </div>  
-  </ion-item>
+
+    <div class= "calc-container" reversed *ngFor="let equation of equations.reverse()">
+      <ion-item>{{equation}}</ion-item>
+    </div>
+
 </ion-content>
