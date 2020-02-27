@@ -7,19 +7,11 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
+  <ion-item class="highlight">
     <ion-input placeholder="Your equation goes here" [(ngModel)] = "userInput" ></ion-input>
-    <button ion-button color="secondary" medium item-end (click)="calculate()"><h1>=</h1></button>
+    <button ion-button color="secondary" large item-end (click)="calculate()"><h1 style = "font-family:arial;font-size:40px;font-style:bold;">=</h1></button>
   </ion-item>
 
-
-  <ion-item>
-    <ion-label>Result: <span class="result">{{result}}</span></ion-label>
-  </ion-item>
-
-
-    <div class= "calc-container" reversed *ngFor="let equation of equations.reverse()">
-      <ion-item>{{equation}}</ion-item>
-    </div>
+  <ion-item *ngFor="let equation of equations.reverse()">{{equation}}</ion-item>
 
 </ion-content>

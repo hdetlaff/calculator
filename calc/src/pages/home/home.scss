@@ -1,3 +1,29 @@
 page-home {
 
+  ion-content{
+    background: #becef7 !important;
+  }
+
+  ion-item{
+    position: relative;
+    top: 5%;
+    max-width: 80% !important;
+    left: 10%;
+    margin-left: 100px;
+    margin-right: 100px;
+
+  }
+
+  ion-title{
+    position: relative;
+    left: 45%;
+  }
+
+  button{
+    transform: rotate(90);
+  }
+
+  .highlight{
+    --highlight-color-valid: #becef7;
+  }
 }
