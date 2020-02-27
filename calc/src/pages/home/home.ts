@@ -23,6 +23,9 @@ export class HomePage {
     var cleaned = this.userInput.replace(/([a-z]|[A-Z])/g, "");
     this.result=eval(cleaned);
     this.equations.push(cleaned + " = " + this.result);
+    if(this.equations.length>10){
+      this.equations.shift();
+    }
   }
 
   getDataFromFirebase(){
